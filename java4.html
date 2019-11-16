@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="text/html; charset=UTF-8"></meta>
+<title>timer</title>
+<style type="text/html">
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+
+
+<button onclick="stopTime(seconds0);">Stop Time</button>
+
+
+<p id="timer"></p>
+
+<script type="text/javascript">
+
+var now= new Date();
+
+var seconds0 = now.getSeconds()+now.getMinutes()*60+ now.getHours()*3600+now.getDay()*24*3600;
+
+function stopTime(seconds0){
+var time = 0;
+var stop = new Date();
+
+var seconds = stop.getSeconds()+stop.getMinutes()*60+stop.getHours()*3600+stop.getDay()*24*3600;
+
+time = seconds-seconds0;
+
+str = "Time:"+time+"s"
+
+document.getElementById("timer").innerHTML=str;
+
+}
+
+
+
+</script>
+
+</body>
+</html>
